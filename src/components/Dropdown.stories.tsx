@@ -5,7 +5,10 @@ const meta: Meta<typeof DropDown>={
 	title: "Components/DropDown",
 	component: DropDown,
 	args:{
-		intent: "click"
+		intent: "click",
+		options: ["Aleks","Adi", "Martin", "Adam"],
+		size: "small",
+		placeholder: "select..."
 	}
 };
 
@@ -13,3 +16,10 @@ export default meta;
 type Story = StoryObj<typeof DropDown>;
 
 export const DefaultDrop: Story = {};
+
+export const HoverDrop: Story = {
+	args:{
+		intent: "hover",
+		size: "small"
+	}
+};
