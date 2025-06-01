@@ -28,7 +28,7 @@ const button = cva(
           "hover:from-white",
           "hover:to-sky-500",
           "hover:text-white",
-          "hover:border-none"
+          // "hover:border-none"
         ],
         unavailable:[
           "bg-gray",

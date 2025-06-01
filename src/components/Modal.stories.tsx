@@ -9,6 +9,8 @@ const meta: Meta<typeof Modal> = {
   args: {
     size: "medium",
     imageSrc: "https://cdn.myshoptet.com/usr/www.iphonarna.cz/user/shop/big/16227_apple-iphone-15-pro-128-gb-natural-titanium.png?65019989", // пример изображения
+    title: "Here is Titile",
+    description: "here is description",
   },
 };
 
@@ -21,13 +23,8 @@ const ModalExample = (args: any) => {
 
   return (
     <>
-      <Button onClick={() => setOpen(true)}>Open Modal</Button>
+      {/* <Button onClick={() => setOpen(true)}>Open Modal</Button> */}
       <Modal open={open} onClose={() => setOpen(false)} imageSrc="https://via.placeholder.com/300" {...args}>
-        <div className="flex flex-end">  
-          <Button intent="secondary" size="small" onClick={() => setOpen(false)}>
-            Close
-          </Button>
-        </div>
       </Modal>
     </>
   );

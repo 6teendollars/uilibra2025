@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import clsx from "clsx";
 import Button from "./Button";
@@ -16,7 +16,7 @@ const backdrop = cva(
 );
 
 const modal = cva(
-  "bg-white rounded-2xl shadow-xl p-6 w-full mx-4 transition-all duration-300 transform",
+  "bg-white rounded-2xl shadow-xl p-3 w-full mx-4 transition-all duration-300 transform",
   {
     variants: {
       open: {
@@ -24,9 +24,9 @@ const modal = cva(
         false: "scale-95 translate-y-4",
       },
       size: {
-        small: "max-w-sm",
-        medium: "max-w-lg",
-        large: "max-w-2xl",
+        small: "max-w-md",
+        medium: "max-w-2xl",
+        large: "max-w-4xl",
       },
     },
     defaultVariants: {
@@ -36,7 +36,7 @@ const modal = cva(
 );
 
 const imageContainer = cva(
-  "w-full h-[60%] overflow-hidden rounded-t-[32px] rounded-b-[16px]"
+  "w-full h-[60%] overflow-hidden rounded-t-[16px] rounded-b-[16px]"
 );
 
 const image = cva("w-full h-full object-cover");
@@ -71,6 +71,8 @@ const Modal: React.FC<ModalProps> = ({
 	console.log("click")
   };
 
+  const [opens, setOpens] = useState(false);
+
   return (
 	<div
 	  className={clsx(backdrop({ open }), className)}
@@ -86,11 +88,16 @@ const Modal: React.FC<ModalProps> = ({
 			  <img src={imageSrc} alt="Modal" className={image()} />
 			</div>
 		  )}
-		  <div className="w-1/2 flex flex-col justify-between">
+		  <div className="w-1/2 flex flex-col justify-between p-3">
 		  <h3 className="text-2xl font-bold mb-2">{title}</h3>
 		  <p className="text-gray-600 mb-4">{description}</p>
-			{children}
-
+			
+      <div className="flex">  
+      <Button className="w-full" intent="primary" size="small" onClick={() => setOpens(false)}>
+            Close
+          </Button>
+              </div>
+              {children}
 		  </div>
 		</div>
 	  </div>
