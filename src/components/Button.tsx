@@ -21,10 +21,14 @@ const button = cva(
         secondary: [
           "bg-white",
           "text-sky-500",
+          "border",
+          "border-sky-100",
+          "shadow",
           "hover:bg-gradient-to-r",
           "hover:from-white",
           "hover:to-sky-500",
           "hover:text-white",
+          "hover:border-none"
         ],
         unavailable:[
           "bg-gray",
@@ -36,7 +40,7 @@ const button = cva(
           "hover:from-fuchsia-600",
           "hover:to-cyan-400",
           "hover:border-white-500",
-          , "opacity-50", "cursor-not-allowed"
+           "opacity-50", 
         ],
       },
       size: {
