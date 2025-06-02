@@ -30,7 +30,8 @@ const modal = cva(
       },
     },
     defaultVariants: {
-      size: "large",
+      size: "medium",
+      open: true,
     },
   }
 );
