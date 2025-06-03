@@ -4,6 +4,7 @@ import DropDown from "./Dropdown";
 const meta: Meta<typeof DropDown>={
 	title: "Components/DropDown",
 	component: DropDown,
+	tags: ['autodocs'],
 	args:{
 		intent: "click",
 		options: ["Aleks","Adi", "Martin", "Adam"],

@@ -4,6 +4,7 @@ import SideBar from "./Sidebar"
 const meta: Meta<typeof SideBar> = {
 	title: "Components/SideBar",
 	component: SideBar, 
+	tags: ['autodocs'],
 	args:{
 		intent: "full",
 		size: "medium",

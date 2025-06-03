@@ -5,6 +5,7 @@ import Box from "./Box"
 const meta: Meta<typeof Box> = {
 	title: "Components/Box",
 	component: Box,
+	tags: ['autodocs'],
 	args:{
 		intent: "check",
 		text: "pls click here...",

@@ -6,6 +6,7 @@ import Modal from "./Modal";
 const meta: Meta<typeof Modal> = {
   title: "Components/Modal",
   component: Modal,
+  tags: ['autodocs'],
   args: {
     size: "medium",
     imageSrc: "https://cdn.myshoptet.com/usr/www.iphonarna.cz/user/shop/big/16227_apple-iphone-15-pro-128-gb-natural-titanium.png?65019989", // пример изображения

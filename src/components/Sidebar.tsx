@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {cva, type VariantProps } from "class-variance-authority"
 import clsx from "clsx"
-import { motion } from "framer-motion";
 
 const sideb = cva("bg-white text-gray-500 shadow translate-all",
 	{

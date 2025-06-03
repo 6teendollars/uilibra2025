@@ -4,6 +4,7 @@ import Card from "./Card";
 const meta: Meta<typeof Card> = {
   title: "Components/Card",
   component: Card,
+  tags: ['autodocs'],
   args: {
     intent: "available",
     size: "medium",

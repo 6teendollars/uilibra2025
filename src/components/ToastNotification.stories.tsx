@@ -4,6 +4,7 @@ import Toast from "./ToastNotification"
 const meta: Meta<typeof Toast> = {
 	title: "Components/Toast",
 	component: Toast,
+	tags: ['autodocs'],
 	args:{
 		intent: "info",
 		condition: true,

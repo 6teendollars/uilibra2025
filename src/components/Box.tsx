@@ -29,10 +29,10 @@ const CustomIconRadio = () => (<svg className="stroke-white" viewBox="0 0 24 24"
 
 
 export interface BoxProps
-  extends React.InputHTMLAttributes<HTMLInputElement>,
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'>,
     VariantProps<typeof box> {
   text: string;
-  size: string;
+  size?: "small" | "medium" | "large";
 }
 
 
